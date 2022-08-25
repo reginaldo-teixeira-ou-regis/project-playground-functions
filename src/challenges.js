@@ -85,16 +85,29 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 09
-function encode() {
-  // seu código aqui
+function encode(string) {
+  for(let cont = 0; cont < string.length; cont += 1) {
+      string = string.replace(/a/g, 1);
+      string = string.replace(/e/g, 2);
+      string = string.replace(/i/g, 3);
+      string = string.replace(/o/g, 4);
+      string = string.replace(/u/g, 5);
+  }
+  return string;
 }
+
 function decode() {
   // seu código aqui
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tech, name) {
+  let arrayList = [];
+  if(tech === "" && name === "") {
+    return "Vazio";
+  } else {
+    return arrayList.push({tech: name: });
+  }
 }
 
 module.exports = {
