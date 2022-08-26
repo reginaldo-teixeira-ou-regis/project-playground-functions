@@ -86,14 +86,21 @@ function fizzBuzz(arrayNumbers) {
 
 // Desafio 09
 function encode(string) {
-  for(let cont = 0; cont < string.length; cont += 1) {
-      string = string.replace(/a/g, 1);
-      string = string.replace(/e/g, 2);
-      string = string.replace(/i/g, 3);
-      string = string.replace(/o/g, 4);
-      string = string.replace(/u/g, 5);
-  }
-  return string;
+  string.split("")
+for(let cont = 0; cont < string.length; cont += 1) {
+   if(string[cont] === "a") {
+    string[cont].replace(/a/g, "1");
+   } else if(string[cont] === "e") {
+    string[cont].replace(/e/g, "2");
+   } else if(string[cont] === "i") {
+    string[cont].replace(/i/g, "3");
+   } else if(string[cont] === "o") {
+    string[cont].replace(/o/g, "4");
+   } else if(string[cont] === "u") {
+    string[cont].replace(/u/g, "5");
+   }
+}
+  return string.join();
 }
 
 function decode() {
@@ -101,12 +108,17 @@ function decode() {
 }
 
 // Desafio 10
-function techList(tech, name) {
-  let arrayList = [];
-  if(tech === "" && name === "") {
+function techList(arrayTech, name) {
+  let arrayListObj = [];
+  let newObject = {};
+  if(arrayTech.length === "") {
     return "Vazio";
   } else {
-    return arrayList.push({tech: name: });
+    for (let index in arrayTech) {
+      arrayListObj = arrayTech[index];
+      arrayListObj = name;
+      arrayListObj
+    }
   }
 }
 
