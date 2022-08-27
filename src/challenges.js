@@ -124,16 +124,18 @@ function decode(numberWords) {
 // Desafio 10
 function techList(arrayTech, name) {
   let arrayListObj = [];
-  let newObject = {};
-  if (arrayTech.length === '') {
-    return 'Vazio';
-  } else {
-    for (let index in arrayTech) {
-      arrayListObj = arrayTech[index];
-      arrayListObj = name;
-      arrayListObj;
-    }
+  //console.log(!arrayTech, arrayTech.length === 0);
+  if(!arrayTech || arrayTech.length === 0) {
+    return "Vazio!";
   }
+  arrayTech = arrayTech.sort();
+  for(let cont = 0; cont < arrayTech.length; cont += 1) {
+      arrayListObj[cont] = {
+        tech: arrayTech[cont],
+        name: name,
+      }
+  }
+  return arrayListObj;
 }
 
 module.exports = {
