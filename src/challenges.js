@@ -58,12 +58,12 @@ function catAndMouse(num1, num2, num3) {
   let mouse = num1;
   let cat1 = num2;
   let cat2 = num3;
-  if ((Math.abs(mouse - cat1)) < (Math.abs(mouse - cat2))) {
-    return "cat1";
-  } else if ((Math.abs(mouse - cat1)) === (Math.abs(mouse - cat2))) {
-    return "os gatos trombam e o rato foge";
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return 'cat1';
+  } else if (Math.abs(mouse - cat1) === Math.abs(mouse - cat2)) {
+    return 'os gatos trombam e o rato foge';
   } else {
-    return "cat2";
+    return 'cat2';
   }
 }
 
@@ -85,39 +85,53 @@ function fizzBuzz(arrayNumbers) {
 }
 
 // Desafio 09
-function encode(string) {
-  string.split("")
-for(let cont = 0; cont < string.length; cont += 1) {
-   if(string[cont] === "a") {
-    string[cont].replace(/a/g, "1");
-   } else if(string[cont] === "e") {
-    string[cont].replace(/e/g, "2");
-   } else if(string[cont] === "i") {
-    string[cont].replace(/i/g, "3");
-   } else if(string[cont] === "o") {
-    string[cont].replace(/o/g, "4");
-   } else if(string[cont] === "u") {
-    string[cont].replace(/u/g, "5");
-   }
-}
-  return string.join();
+function encode(words) {
+  let arrayString = words.split('');
+  for (let cont = 0; cont < arrayString.length; cont += 1) {
+    if (arrayString[cont] === 'a') {
+      arrayString[cont] = '1';
+    } else if (arrayString[cont] === 'e') {
+      arrayString[cont] = '2';
+    } else if (arrayString[cont] === 'i') {
+      arrayString[cont] = '3';
+    } else if (arrayString[cont] === 'o') {
+      arrayString[cont] = '4';
+    } else if (arrayString[cont] === 'u') {
+      arrayString[cont] = '5';
+    }
+  }
+  return arrayString.join('');
 }
 
-function decode() {
-  // seu código aqui
+function decode(numberWords) {
+  let arrayString = numberWords.split('');
+  for (let cont = 0; cont < arrayString.length; cont += 1) {
+    if (arrayString[cont] === '1') {
+      arrayString[cont] = 'a';
+    } else if (arrayString[cont] === '2') {
+      arrayString[cont] = 'e';
+    } else if (arrayString[cont] === '3') {
+      arrayString[cont] = 'i';
+    } else if (arrayString[cont] === '4') {
+      arrayString[cont] = 'o';
+    } else if (arrayString[cont] === '5') {
+      arrayString[cont] = 'u';
+    }
+  }
+  return arrayString.join('');
 }
 
 // Desafio 10
 function techList(arrayTech, name) {
   let arrayListObj = [];
   let newObject = {};
-  if(arrayTech.length === "") {
-    return "Vazio";
+  if (arrayTech.length === '') {
+    return 'Vazio';
   } else {
     for (let index in arrayTech) {
       arrayListObj = arrayTech[index];
       arrayListObj = name;
-      arrayListObj
+      arrayListObj;
     }
   }
 }
